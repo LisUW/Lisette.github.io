@@ -1,0 +1,72 @@
+body {
+    background-color: #ffdce6; /* soft pastel pink */
+    font-family: "Georgia", serif;
+}
+
+h1, h2, h3 {
+    font-family: "Georgia", serif;
+}
+
+/* Make all menu photos the same size */
+nav img {
+    width: 120px;   /* same size for all */
+    height: 120px;  /* square */
+    object-fit: cover; /* crop to avoid distortion */
+    border-radius: 10px; /* soft rounded corners */
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Optional: center links and give a cute style */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c2185b; /* stronger pink */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- Thumbnail grid only for the Awards gallery --- */
+.gallery {
+    /* responsive grid for thumbnails */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    align-items: start;
+    margin: 24px 0;
+}
+
+.gallery img {
+    /* keep images small and avoid distortion */
+    width: 100%;           /* fill the grid cell */
+    height: 160px;         /* consistent thumbnail height */
+    object-fit: cover;     /* crop without distortion */
+    border-radius: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    display: block;
+}
+
+/* On large screens, increase height for better detail */
+@media (min-width: 768px) {
+    .gallery img {
+        height: 200px;
+    }
+}
+
+/* On very small screens, reduce height to fit more images */
+@media (max-width: 380px) {
+    .gallery img {
+        height: 130px;
+    }
+}
+body {
+    padding: 20px;
+  }
